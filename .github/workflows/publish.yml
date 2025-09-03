@@ -26,6 +26,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
+      - name: Generate fallback changelog if needed
+        run: |
+          # Fallback für das Changelog, falls das Plugin nicht funktioniert
+          if ! pip list | grep -q "mkdocs-changelog-plugin"; then
+            echo "# Changelog" > docs/changelog.md
+            echo "" >> docs/changelog.md
+            echo "## Änderungshistorie" >> docs/changelog.md
+            echo "" >> docs/changelog.md
+            git log --pretty=format:"### %ad - %an%n%s%n%n" --date=short >> docs/changelog.md
+          fi
+          
       - name: Build and deploy
         run: |
           mkdocs gh-deploy --force
