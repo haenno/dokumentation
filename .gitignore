@@ -1,0 +1,38 @@
+# MkDocs generierte Dateien
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtuelle Umgebungen
+venv/
+ENV/
+
+# IDE-Dateien
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS-Dateien
+.DS_Store
+Thumbs.db

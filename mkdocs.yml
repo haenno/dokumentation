@@ -1,0 +1,40 @@
+site_name: Dokumentation
+site_url: https://haenno.github.io/dokumentation
+repo_url: https://github.com/haenno/dokumentation
+repo_name: haenno/dokumentation
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+  - git-changelog:
+      changelog_file: docs/changelog.md
+
+theme:
+  name: material
+  language: de
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Kurzbeschreibung: kurzbeschreibung.md
+  - Begriffserklärung: begriffserklarung.md
+  - Pausenfunktion: pausenfunktion.md
+  - Changelog: changelog.md
