@@ -1,11 +1,7 @@
 # Changelog
 
-Diese Seite wird automatisch aus den Git-Commits generiert. Sie enthält eine Übersicht über alle Änderungen und Erweiterungen am Repository.
+Hinweis: Diese Seite wird bei jedem Build automatisch aus den Git-Commits generiert. Manuelle Änderungen werden überschrieben.
 
-## Änderungsprotokoll
+## Änderungshistorie
 
-<!-- Diese Sektion wird automatisch vom changelog-Plugin gefüllt -->
-
-{% if not page.meta.plugin_generated %}
-{{ get_git_changelog() }}
-{% endif %}
+Wird von der CI generiert...

@@ -8,9 +8,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
-  - changelog:
-      changelog_file: docs/changelog.md
-  - mkdocs-macros-plugin
 
 theme:
   name: material
