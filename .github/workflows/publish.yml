@@ -47,7 +47,8 @@ jobs:
           echo "" >> docs/changelog.md
           echo "## Änderungshistorie" >> docs/changelog.md
           echo "" >> docs/changelog.md
-          git log --date=short --pretty=format:"### %ad - %an%n%s%n" --no-merges >> docs/changelog.md
+          REPO_URL="https://github.com/haenno/dokumentation/commit"
+          git log --no-merges --date=short --pretty=format:"### %ad - %an%n- %s ([%h](${REPO_URL}/%H))%n" >> docs/changelog.md
 
       - name: Build site
         run: |
